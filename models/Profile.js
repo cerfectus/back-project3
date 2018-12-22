@@ -5,6 +5,10 @@ const TeamSchema = new Schema({
   Username:{
     type: String,
   },
+  gamesPlayed:{
+    type: Number,
+    
+  }
   
 
 

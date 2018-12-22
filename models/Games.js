@@ -27,6 +27,10 @@ const gamesSchema = new Schema(
         type: String
       }
     },
+    takenPlaces:{
+      type: Number,
+      default: 0
+    },
     
       Players: {
       type: Number
