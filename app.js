@@ -60,9 +60,12 @@ app.locals.title = 'Express - Generated with IronGenerator';
 const index = require('./routes/index');
 const posts = require('./routes/posts');
 const auth = require('./routes/auth');
-app.use('/', index);
+
 app.use('/api/posts', posts);
 app.use('/api/auth', auth);
+app.all("*",(req,res)=>{
+  res.sendFile(`${__dirname}/public/index.html`)
+})
 
 
 
