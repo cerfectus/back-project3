@@ -29,7 +29,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["http://localhost:3001"]
+  origin: ["http://localhost:3001","https://pick-and-roll.herokuapp.com/"]
 }));
 
 // Middleware Setup
@@ -63,6 +63,7 @@ const auth = require('./routes/auth');
 
 app.use('/api/posts', posts);
 app.use('/api/auth', auth);
+
 app.all("*",(req,res)=>{
   res.sendFile(`${__dirname}/public/index.html`)
 })
