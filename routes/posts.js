@@ -9,7 +9,7 @@ router.get("/", auth.verifyToken ,(req, res) => {
             res.status(200).json({posts});
         })
         .catch(err => {
-            res.status(500).json({err, msg:"Algo no funcó"})
+            res.status(500).json({err, msg:"500"})
         })
 });
 
@@ -23,7 +23,7 @@ router.post("/", (req, res) => {
         })
         .catch(err => {
             console.log(err)
-            res.status(500).json({err, msg:"Ne se creo mijo"})
+            res.status(500).json({err, msg:"500"})
         })
 });
 
@@ -33,7 +33,7 @@ router.get("/:id", (req, res) => {
             res.status(200).json({post});
         })
         .catch(err => {
-            res.status(500).json({err, msg: "Algo salió mal"})
+            res.status(500).json({err, msg: "500"})
         })
 });
 
@@ -46,7 +46,7 @@ router.patch("/:id", (req, res) => {
             res.status(200).json({post});
         })
         .catch(err => {
-            res.status(500).json({err, msg:"Ne se actualizo mijo"})
+            res.status(500).json({err, msg:"500"})
         })
 });
 
@@ -57,7 +57,7 @@ router.delete("/:id", (req, res) => {
             res.status(200).json({post});
         })
         .catch(err => {
-            res.status(500).json({err, msg: "No se pudo borrar tu jalada"})
+            res.status(500).json({err, msg: "500"})
         })
 });
 
